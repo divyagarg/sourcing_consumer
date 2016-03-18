@@ -27,3 +27,6 @@ LOG_FILE = 'application.log'
 DEBUG_LOG_FILE = 'application_debug.log'
 ERROR_LOG_FILE = 'application_error.log'
 ENV = 'default'
+
+FINANCE_SERVICE_TOKEN = "iu3y092u3yrb9823ryb9283rbt23847o479bexypr18tvcr98pxby3p"
+FINANCE_SERVICE_CREATE_ORDERS_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_order'

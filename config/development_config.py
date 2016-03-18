@@ -19,3 +19,8 @@ ENV = 'default'
 
 
 FINANCE_SERVICE_TOKEN = 9889
+
+
+
+
+FINANCE_SERVICE_CREATE_ORDERS_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_order'
