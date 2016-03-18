@@ -33,7 +33,7 @@ class OrderEngineConsumer(threading.Thread):
                 print message
 
         except Exception as ex:
-            Logger.log_error(ex)
+            Logger.error('Exception while consuming messsege from partition', exc_info=True)
 
     def publish_message_to_finance_service(self, message):
         try:
