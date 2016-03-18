@@ -25,7 +25,7 @@ class OrderEngineConsumer(threading.Thread):
         try:
             for message in consumer:
                 starttime = datetime.datetime.now()
-                self.publish_message_to_finance_service()
+                self.publish_message_to_finance_service(message)
                 endtime = datetime.datetime.now()
                 timetaken = endtime - starttime
                 total_time = timetaken.seconds*1000000 + timetaken.microseconds
