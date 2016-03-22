@@ -42,10 +42,8 @@ class OrderEngineConsumer(threading.Thread):
 
             data = {
                 'token' : FINANCE_SERVICE_TOKEN,
-                'data':{
-                    'order_uuid':json_data['order_uuid'],
-                    'order_data':json_data
-                }
+                'data':json_data,
+                'entity_id':str(message.key)
             }
 
             res = requests.post(url=FINANCE_SERVICE_CREATE_ORDERS_URL, data=json.dumps(data))
