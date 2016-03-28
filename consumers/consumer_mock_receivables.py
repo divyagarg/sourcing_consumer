@@ -24,6 +24,8 @@ class MockReceivableConsumer(threading.Thread):
                                  group_id=receivable_kafka_group,
                                  bootstrap_servers=receivable_kafka_hosts)
         try:
+            print 'Starting consuming mock receivables'
+
             for message in consumer:
                 starttime = datetime.datetime.now()
                 self.publish_message_to_finance_service(message)

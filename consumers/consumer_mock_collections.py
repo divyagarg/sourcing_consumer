@@ -24,6 +24,7 @@ class MockCollectionConsumer(threading.Thread):
                                  group_id=collection_kafka_group,
                                  bootstrap_servers=collection_kafka_hosts)
         try:
+            print 'Starting consuming mock collection'
             for message in consumer:
                 starttime = datetime.datetime.now()
                 self.publish_message_to_finance_service(message)
