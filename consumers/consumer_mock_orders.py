@@ -32,7 +32,6 @@ class MockOrderConsumer(threading.Thread):
                 timetaken = endtime - starttime
                 total_time = timetaken.seconds*1000000 + timetaken.microseconds
                 Logger.info('Total time taken to consume order %s'%total_time)
-                print 'Consumed Order message', message
 
         except Exception as ex:
             traceback.print_exc()
