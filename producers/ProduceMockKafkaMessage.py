@@ -79,28 +79,28 @@ class ProduceMockKafkaMessage(threading.Thread):
                 "collections":[
                     {
                         "transaction_id":random.random()*1000000000000,
-                        "transaction_type":"Credit",
+                        "transaction_type":"credited",
                         "channel":"PAAS",
                         "amount":random.random()*1000000,
                         "status":"Approved"
                     },
                     {
                         "transaction_id":random.random()*1000000000000,
-                        "transaction_type":"Credit",
+                        "transaction_type":"credited",
                         "channel":"wallet",
                         "amount":random.random()*1000000,
                         "status":"Approved"
                     },
                     {
                         "transaction_id":random.random()*1000000000000,
-                        "transaction_type":"Credit",
+                        "transaction_type":"credited",
                         "channel":"Cash on Delivery",
                         "amount":random.random()*1000000,
                         "status":"Approved"
                     },
                     {
                         "transaction_id":random.random()*1000000000000,
-                        "transaction_type":"Credit",
+                        "transaction_type":"credited",
                         "channel":"PAAS",
                         "amount":random.random()*1000000,
                         "status":"Approved"
