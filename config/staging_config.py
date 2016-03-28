@@ -34,9 +34,10 @@ PUBLISH_TO_KAFKA = True
 
 PRODUCE_MESSAGE = True
 
-create_receivable_url = None
-create_order_url = None
-create_collection_url = None
+create_receivable_url = 'http://pyservice01.staging.askme.com:11000/finance_service/receivable/create_receivable'
+create_order_url = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_order'
+create_collection_url = 'http://pyservice01.staging.askme.com:11000/finance_service/collection/create_collection'
+
 
 receivable_kafka_hosts = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092',
                'kafka03.production.askmebazaar.com:9092']
