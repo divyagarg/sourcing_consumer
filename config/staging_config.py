@@ -38,15 +38,18 @@ create_receivable_url = None
 create_order_url = None
 create_collection_url = None
 
-receivable_kafka_hosts = ['dc1.staging.askme.com:9092', 'dc2.staging.askme.com:9092', 'dc3.staging.askme.com:9092']
+receivable_kafka_hosts = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092',
+               'kafka03.production.askmebazaar.com:9092']
 receivable_kafka_group = 'mock_receivable_consumer'
 receivable_kafka_topic = 'fin_mock_receivable'
 
-collection_kafka_hosts = ['dc1.staging.askme.com:9092', 'dc2.staging.askme.com:9092', 'dc3.staging.askme.com:9092']
+collection_kafka_hosts = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092',
+               'kafka03.production.askmebazaar.com:9092']
 collection_kafka_group = 'mock_collection_consumer'
 collection_kafka_topic = 'fin_mock_collection'
 
-order_kafka_hosts = ['dc1.staging.askme.com:9092', 'dc2.staging.askme.com:9092', 'dc3.staging.askme.com:9092']
+order_kafka_hosts = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092',
+               'kafka03.production.askmebazaar.com:9092']
 order_kafka_group = 'mock_order_consumer'
 order_kafka_topic = 'fin_mock_order'
 
