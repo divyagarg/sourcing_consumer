@@ -1,7 +1,7 @@
 import json
 import datetime
 from config import collection_kafka_topic, collection_kafka_group, KAFKA_GROUP, collection_kafka_hosts, APP_NAME, FINANCE_SERVICE_TOKEN, \
-    FINANCE_SERVICE_CREATE_ORDERS_URL, create_collection_url
+    create_collection_url
 import requests
 import sys, traceback
 __author__ = 'Ansal007'
