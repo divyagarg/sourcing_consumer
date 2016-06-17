@@ -20,7 +20,7 @@ class OrderEngineConsumer(threading.Thread):
         super(OrderEngineConsumer, self).__init__()
 
     def run(self):
-
+        Logger.info('Consuming for Topic:{}, Group:{}, Hosts: {}'%(KAFKA_TOPIC,KAFKA_GROUP,KAFKA_HOSTS))
         consumer = KafkaConsumer(KAFKA_TOPIC,
                                  group_id=KAFKA_GROUP,
                                  bootstrap_servers=KAFKA_HOSTS)
