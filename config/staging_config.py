@@ -4,10 +4,10 @@ __author__ = 'Ansal007'
 
 APP_NAME = 'finance_orders_consumer'
 
-KAFKA_HOSTS = ['kafka01.production.askmebazaar.com:2181', 'kafka02.production.askmebazaar.com:2181',
-               'kafka03.production.askmebazaar.com:2181']
+KAFKA_HOSTS = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092',
+               'kafka03.production.askmebazaar.com:9092']
 KAFKA_TOPIC = 'grocery_orderservice_staging'
-KAFKA_GROUP = '9027409274230794'
+KAFKA_GROUP = 'Finance_Consumer_413412'
 
 DATABASES = {
     'default': {
