@@ -7,7 +7,7 @@ APP_NAME = 'finance_orders_consumer'
 KAFKA_HOSTS = ['kafka01.production.askmebazaar.com:2181', 'kafka02.production.askmebazaar.com:2181',
                'kafka03.production.askmebazaar.com:2181']
 KAFKA_TOPIC = 'grocery_orderservice_staging'
-KAFKA_GROUP = 'finance_orders_consumer_9375983457'
+KAFKA_GROUP = '9027409274230794'
 
 DATABASES = {
     'default': {
