@@ -14,13 +14,13 @@ from consumers.consumer_mock_receivables import MockReceivableConsumer
 __author__ = 'Ansal007'
 
 setup_logging()
-CollectionPublisher.init()
-OrderPublisher.init()
-ReceivablePublisher.init()
+# CollectionPublisher.init()
+# OrderPublisher.init()
+# ReceivablePublisher.init()
 
 t1 = OrderEngineConsumer()
-t2 = OrderEngineConsumer()
-t3 = OrderEngineConsumer()
+# t2 = OrderEngineConsumer()
+# t3 = OrderEngineConsumer()
 
 # producer = ProduceMockKafkaMessage()
 # cc = MockCollectionConsumer()
@@ -40,8 +40,9 @@ t3 = OrderEngineConsumer()
 # oo.join()
 
 t1.start()
-t2.start()
-t3.start()
+# t2.start()
+# t3.start()
+# t1.join()
+# t2.join()
+# t3.join()
 t1.join()
-t2.join()
-t3.join()

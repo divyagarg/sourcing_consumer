@@ -23,15 +23,15 @@ class OrderEngineConsumer(threading.Thread):
 
         consumer = KafkaConsumer(KAFKA_TOPIC,
                                  group_id=KAFKA_GROUP,
-                                 bootstrap_servers=KAFKA_HOSTS,auto_commit=False)
+                                 bootstrap_servers=KAFKA_HOSTS)
         for message in consumer:
             try:
                 starttime = datetime.datetime.now()
                 flag = self.publish_message_to_finance_service(message)
-                if flag:
-                    consumer.commit()
-                else:
-                    continue
+                # if flag:
+                #     consumer.commit()
+                # else:
+                #     continue
                 endtime = datetime.datetime.now()
                 timetaken = endtime - starttime
                 total_time = timetaken.seconds*1000000 + timetaken.microseconds
@@ -39,7 +39,7 @@ class OrderEngineConsumer(threading.Thread):
             except Exception as ex:
                 traceback.print_exc()
                 Logger.error('Exception while consuming messsege from partition', exc_info=True)
-                consumer.commit()
+                # consumer.commit()
 
 
 
