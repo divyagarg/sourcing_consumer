@@ -26,6 +26,7 @@ class OrderEngineConsumer(threading.Thread):
                                  bootstrap_servers=KAFKA_HOSTS)
         for message in consumer:
             try:
+                Logger.info("Starting to consume message:%s "%(message.value))
                 starttime = datetime.datetime.now()
                 flag = self.publish_message_to_finance_service(message)
                 # if flag:
@@ -56,7 +57,9 @@ class OrderEngineConsumer(threading.Thread):
 
             res = requests.post(url=OrderEngineConsumer.build_url_from_message(json_data), data=json.dumps(data))
             Logger.info('Order posted for orderid {%s} with status code {%s} and status text{%s}'%(message.key, res.status_code, res.text))
-            if res.content['status'] != 'success':
+            res_json = json.loads(res.text)
+
+            if res_json['status'] != 'success':
                 Logger.error('Data not persisted, retrying! Order not processed for orderid {%s} with status code {%s} and status text {%s}, DATA: {%s}'%(message.key, res.status_code, res.text, json_data))
                 return False
             else:
