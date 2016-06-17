@@ -22,6 +22,13 @@ PUBLISH_TO_KAFKA = True
 PRODUCE_MESSAGE=False
 
 
+
+FINANCE_SERVICE_CREATE_BUYER_ORDERS_URL = None
+FINANCE_SERVICE_CREATE_SELLER_ORDERS_URL = None
+FINANCE_SERVICE_CREATE_BUYER_COLLECTION_URL = None
+FINANCE_SERVICE_CREATE_SELLER_COLLECTION_URL = None
+
+
 create_receivable_url = None
 create_order_url = None
 create_collection_url = None
@@ -37,3 +44,15 @@ collection_kafka_topic = None
 order_kafka_hosts = None
 order_kafka_group = None
 order_kafka_topic = None
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'orderengine',  # Or path to database file if using sqlite3.
+        'USER': 'orderengine',  # Not used with sqlite3.
+        'PASSWORD': 'OrderEng1ne',  # Not used with sqlite3.
+        'HOST': 'order-engine.c0wj8qdslqom.ap-southeast-1.rds.amazonaws.com',  # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',  # Set to empty string for default. Not used with sqlite3.
+    }
+}

@@ -19,7 +19,10 @@ ENV = 'default'
 
 FINANCE_SERVICE_TOKEN = 9889
 
-FINANCE_SERVICE_CREATE_ORDERS_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_order'
+FINANCE_SERVICE_CREATE_BUYER_ORDERS_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_buyer_order'
+FINANCE_SERVICE_CREATE_SELLER_ORDERS_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/order/create_seller_order'
+FINANCE_SERVICE_CREATE_BUYER_COLLECTION_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/collection/create_buyer_collection'
+FINANCE_SERVICE_CREATE_SELLER_COLLECTION_URL = 'http://pyservice01.staging.askme.com:11000/finance_service/collection/create_seller_collection'
 
 PUBLISH_TO_KAFKA = True
 
@@ -46,3 +49,14 @@ order_kafka_group = 'mock_order_consumer'
 order_kafka_topic = 'fin_mock_order'
 
 SLEEP = 1
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'financedb',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': '',
+        'PORT': 5432
+    }
+}

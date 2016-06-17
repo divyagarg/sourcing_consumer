@@ -20,25 +20,28 @@ ReceivablePublisher.init()
 
 t1 = OrderEngineConsumer()
 t2 = OrderEngineConsumer()
+t3 = OrderEngineConsumer()
 
-producer = ProduceMockKafkaMessage()
-cc = MockCollectionConsumer()
-rr = MockReceivableConsumer()
-oo = MockOrderConsumer()
+# producer = ProduceMockKafkaMessage()
+# cc = MockCollectionConsumer()
+# rr = MockReceivableConsumer()
+# oo = MockOrderConsumer()
+#
+#
+#
+# producer.start()
+# cc.start()
+# rr.start()
+# oo.start()
+#
+# producer.join()
+# cc.join()
+# rr.join()
+# oo.join()
 
-
-
-producer.start()
-cc.start()
-rr.start()
-oo.start()
-
-producer.join()
-cc.join()
-rr.join()
-oo.join()
-
-# t1.start()
-# t2.start()
-# t1.join()
-# t2.join()
+t1.start()
+t2.start()
+t3.start()
+t1.join()
+t2.join()
+t3.join()

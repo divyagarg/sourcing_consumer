@@ -8,7 +8,7 @@ from config import APP_NAME, order_kafka_hosts, order_kafka_topic
 
 Logger = logging.getLogger(APP_NAME)
 
-class OrderPublisher:
+class OrderPublisher(object):
     kafka = None
     producer = None
 
