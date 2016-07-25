@@ -1,12 +1,12 @@
+__author__ = 'divyagarg'
 import os
 
-__author__ = 'Ansal007'
 
-APP_NAME = 'finance_orders_consumer'
+APP_NAME = 'sourcing_consumer'
 
 KAFKA_HOSTS = ['kafka01.production.askmebazaar.com:9092', 'kafka02.production.askmebazaar.com:9092','kafka03.production.askmebazaar.com:9092']
-KAFKA_TOPIC = 'orderengine.production'
-KAFKA_GROUP = 'finance_orders_consumer_9375983457'
+KAFKA_TOPIC = 'grocery_orderservice_staging'
+KAFKA_GROUP = 'sourcing_consumer_9375983457'
 
 
 HOME = '/var/log/'
@@ -21,12 +21,6 @@ PUBLISH_TO_KAFKA = True
 
 PRODUCE_MESSAGE=False
 
-
-
-FINANCE_SERVICE_CREATE_BUYER_ORDERS_URL = None
-FINANCE_SERVICE_CREATE_SELLER_ORDERS_URL = None
-FINANCE_SERVICE_CREATE_BUYER_COLLECTION_URL = None
-FINANCE_SERVICE_CREATE_SELLER_COLLECTION_URL = None
 
 
 create_receivable_url = None
@@ -45,14 +39,3 @@ order_kafka_hosts = None
 order_kafka_group = None
 order_kafka_topic = None
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'orderengine',  # Or path to database file if using sqlite3.
-        'USER': 'orderengine',  # Not used with sqlite3.
-        'PASSWORD': 'OrderEng1ne',  # Not used with sqlite3.
-        'HOST': 'order-engine.c0wj8qdslqom.ap-southeast-1.rds.amazonaws.com',  # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '3306',  # Set to empty string for default. Not used with sqlite3.
-    }
-}

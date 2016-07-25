@@ -1,3 +1,5 @@
+__author__ = 'divyagarg'
+
 import logging
 from logging import handlers
 from config import HOME, LOG_DIR, APP_NAME, LOG_FILE, ERROR_LOG_FILE
